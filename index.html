@@ -154,6 +154,47 @@ details.grp table td.why b{color:var(--ink)}
 .tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--bg);padding:8px 10px;border-radius:8px;font-size:12px;z-index:30;display:none;max-width:280px;font-variant-numeric:tabular-nums}
 .empty{padding:30px;text-align:center;color:var(--ink2)}
 @media (max-width:1100px){.kpi2{grid-template-columns:minmax(0,1fr)}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.two,.dlists{grid-template-columns:minmax(0,1fr)}}
+.gv-toggle{margin-bottom:14px}
+.band{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:20px 22px;margin-bottom:14px}
+.band .top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:10px 20px}
+.band .bn{font-family:var(--f-display);font-size:24px;font-weight:650}
+.band .bt{font-family:var(--f-mono);font-size:40px;font-weight:600;letter-spacing:-.03em;line-height:1.05}
+.band .bar{height:16px;margin:14px 0 14px;border-radius:6px}
+.tiles{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.tile{border-radius:14px;padding:12px 14px;min-width:0}
+.tile span{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;display:flex;gap:6px;align-items:center;color:var(--ink2)}
+.tile b{display:block;font-family:var(--f-mono);font-size:22px;color:var(--ink);margin-top:4px;white-space:nowrap}
+.tile em{font-style:normal;font-size:12.5px;color:var(--ink2)}
+.t-s{background:color-mix(in srgb,var(--salao) 13%,var(--panel))}
+.t-d{background:color-mix(in srgb,var(--deliv) 13%,var(--panel))}
+.t-i{background:color-mix(in srgb,var(--ifood) 10%,var(--panel))}
+.t-o{background:color-mix(in srgb,var(--outros) 11%,var(--panel))}
+.t-dd{background:color-mix(in srgb,var(--ddir) 12%,var(--panel))}
+.tile.big b{font-size:26px}
+.gcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:12px;margin-bottom:22px}
+.gc{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:16px 18px;cursor:pointer;min-width:0;transition:box-shadow .15s,transform .15s}
+.gc:hover{box-shadow:0 6px 22px rgba(30,20,60,.10);transform:translateY(-1px)}
+.gc.open{grid-column:1/-1;cursor:default;transform:none}
+.gc .gh{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.gc .gn{font-weight:700;font-size:15px;display:flex;gap:8px;align-items:center;min-width:0}
+.gc .gn i{font-style:normal;font-size:20px}
+.gc .gt{font-family:var(--f-mono);font-size:28px;font-weight:600;letter-spacing:-.02em;margin-top:8px;white-space:nowrap}
+.gc .gq{font-size:12.5px;color:var(--ink2)}
+.gc .bar{height:12px;margin:12px 0 10px}
+.gc .two2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.gc .two2 .tile{padding:10px 12px}.gc .two2 .tile b{font-size:18px}
+.dl3{display:grid;gap:5px;margin-top:10px}
+.dl3 div{display:grid;grid-template-columns:92px minmax(0,1fr) 92px 40px;gap:8px;align-items:center;font-size:12.5px;color:var(--ink2)}
+.dl3 .mb{height:7px;border-radius:3px;background:var(--soft);overflow:hidden}.dl3 .mb span{display:block;height:100%}
+.dl3 b{font-family:var(--f-mono);font-size:12.5px;color:var(--ink);text-align:right;font-weight:600}
+.gc .more{margin-top:10px;font-size:12.5px;font-weight:600;color:var(--salao)}
+.subl{margin-top:14px;border-top:1px solid var(--line);padding-top:10px;display:grid;gap:2px}
+.subl .sr{display:grid;grid-template-columns:minmax(160px,1.3fr) minmax(120px,2fr) 120px 90px 110px 70px;gap:12px;align-items:center;padding:9px 8px;border-radius:10px;cursor:pointer;font-size:13px}
+.subl .sr:hover{background:var(--soft)}
+.subl .sr.h{cursor:default;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink2);font-weight:700}.subl .sr.h:hover{background:none}
+.subl .num{font-family:var(--f-mono);text-align:right;font-size:12.5px}
+td.cs{background:color-mix(in srgb,var(--salao) 7%,var(--panel))}td.cd{background:color-mix(in srgb,var(--deliv) 9%,var(--panel));font-weight:600}td.ci{background:color-mix(in srgb,var(--ifood) 5%,var(--panel))}td.co{background:color-mix(in srgb,var(--outros) 6%,var(--panel))}td.cdd{background:color-mix(in srgb,var(--ddir) 6%,var(--panel))}td.ct{font-weight:700}
+@media (max-width:1100px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.tiles .tile:first-child{grid-column:1/-1}.subl .sr{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) 110px 70px}.subl .sr .hide2{display:none}}
 .mob{display:none}
 .mlist{display:grid;gap:10px}
 .mc{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px 16px;min-width:0}
@@ -257,8 +298,10 @@ details.grp table td.why b{color:var(--ink)}
 
   <section class="view" id="v-canais">
     <h1>Grupos × canais</h1>
-    <p class="lede">Cada grupo aberto em subgrupos: salão × delivery e, dentro do delivery, iFood, telefone/WhatsApp e Delivery Direto. As poucas vendas do site do Dell'Iris estão somadas no Delivery Direto. Clique num grupo para abrir; clique num subgrupo para ver os produtos.</p>
-    <div class="tbl-wrap desk"><table id="tCanais"></table></div><div class="mob mlist" id="mCanais"></div>
+    <p class="lede">Cada marca no topo com salão × delivery; embaixo, um cartão por grupo. Clique no cartão para abrir os subgrupos e no subgrupo para ver os produtos. Prefere planilha? Use o botão “Tabela”.</p>
+    <div class="seg gv-toggle desk" id="gvT"><button data-gv="cards" class="on">Cartões</button><button data-gv="table">Tabela</button></div>
+    <div class="desk" id="gCards"></div>
+    <div class="tbl-wrap desk" id="gTable" hidden><table id="tCanais"></table></div><div class="mob mlist" id="mCanais"></div>
   </section>
 
   <section class="view" id="v-produtos">
@@ -420,6 +463,8 @@ function prodCard(o,extra=''){return `<div class="mc click" data-p="${o.p}"><div
  <div class="row" style="align-items:flex-end"><div class="big">${R(o.vP)}</div><div style="text-align:right">${Q(o.qP)} un<br>${deltaTag(o.q[1],o.q[0])}</div></div>
  <div class="row"><span>Set ${Q(o.q[0])} → Out ${Q(o.q[1])} un</span><span>Preço ${R2(o.pO??o.pS)}</span></div>
  <div class="row" style="justify-content:flex-start">${pill(MENU,o.menu)}${o.preco?pill(PRECO,o.preco):''}<span class="abc abc-${o.abc||'-'}">${o.abc||'–'}</span><span>${o.nst} loja${o.nst==1?'':'s'}</span></div>${extra}</div>`}
+const GE=[['LANCHE','🌭'],['DOG','🌭'],['REFEI','🍛'],['PIZZA','🍕'],['BEBIDA','🥤'],['BURGER','🍔'],['PORC','🍟'],['AUXIL','🧾'],['PASTE','🥟'],['CHIN','🥡'],['JAPON','🍣'],['POKE','🥗'],['MARMIT','🍱'],['SOBREM','🍨'],['B2B','🏢'],['EVENTO','🎉'],['MASSA','🍝'],['SALADA','🥗'],['ACAI','🍇'],['BOMBON','🍫'],['CAFE','☕'],['SUCO','🧃'],['TAXA','🧾'],['COMBO','🎁'],['ENTRADA','🥖'],['PRATO','🍽️'],['CARNE','🥩'],['DOCE','🍰']];
+const gEmoji=n=>{n=n.toUpperCase();for(const [k,e] of GE)if(n.includes(k))return e;return '🍽️'};
 function bindCards(root){root.querySelectorAll('.mc[data-p]').forEach(c=>c.onclick=()=>openDrawer(+c.dataset.p))}
 MOB.addEventListener?MOB.addEventListener('change',()=>render()):MOB.addListener(()=>render());
 
@@ -460,8 +505,8 @@ function renderCanais(){
   const ch=chAgg();const byG=new Map();
   for(const [sg,o] of ch){const g=grpOfSub[sg];(byG.get(g)||byG.set(g,[]).get(g)).push([sg,pick(o),fin(o[0]),fin(o[1])])}
   const byB=new Map();for(const [g,l] of byG){const b=brOfG[g];(byB.get(b)||byB.set(b,[]).get(b)).push([g,l])}
-  const cell=(q,v)=>`<td class="num">${Q(q)}</td><td class="num">${R(v)}</td>`;
-  const line=(x,s,o)=>cell(x.sq,x.sv)+`<td class="num dcol">${Q(x.delq)}</td><td class="num dcol">${R(x.delv)}</td>`+cell(x.iq,x.iv)+cell(x.cq,x.cv)+cell(x.dq+x.wq,x.dv+x.wv)+cell(x.tq,x.tv)+`<td class="num">${pct(x.tv?x.delv/x.tv:0)}</td><td class="num">${pct(x.delv?x.iv/x.delv:0)}</td><td>${barHTML(x,'mini')}</td><td>${deltaTag(o.tv,s.tv)}</td>`;
+  const cell=(q,v,c='')=>`<td class="num ${c}">${Q(q)}</td><td class="num ${c}">${R(v)}</td>`;
+  const line=(x,s,o)=>cell(x.sq,x.sv,'cs')+cell(x.delq,x.delv,'cd')+cell(x.iq,x.iv,'ci')+cell(x.cq,x.cv,'co')+cell(x.dq+x.wq,x.dv+x.wv,'cdd')+cell(x.tq,x.tv,'ct')+`<td class="num">${pct(x.tv?x.delv/x.tv:0)}</td><td class="num">${pct(x.delv?x.iv/x.delv:0)}</td><td>${barHTML(x,'mini')}</td><td>${deltaTag(o.tv,s.tv)}</td>`;
   let h=`<thead><tr><th class="l" rowspan="2">Grupo / subgrupo</th><th colspan="2" class="ch-s">Salão*</th><th colspan="2" class="ch-d">Delivery</th><th colspan="2" class="ch-i">· iFood</th><th colspan="2" class="ch-o">· Telefone/WhatsApp</th><th colspan="2" class="ch-dd">· Delivery Direto</th><th colspan="2" class="ch-t">Total</th><th rowspan="2">% delivery no total</th><th rowspan="2">% iFood no delivery</th><th rowspan="2">Mix</th><th rowspan="2">Out × Set</th></tr><tr><th>Qtd</th><th>R$</th><th>Qtd</th><th>R$</th><th>Qtd</th><th>R$</th><th>Qtd</th><th>R$</th><th>Qtd</th><th>R$</th><th>Qtd</th><th>R$</th></tr></thead><tbody>`;
   const brs=[...byB].map(([b,gl])=>{const all=gl.flatMap(([g,l])=>l);return [b,gl,sumCh(all.map(z=>z[1])),sumCh(all.map(z=>z[2])),sumCh(all.map(z=>z[3]))]}).sort((a,b)=>b[2].tv-a[2].tv);
   for(const [b,gl,x,s,o] of brs){
@@ -473,6 +518,29 @@ function renderCanais(){
         h+=`<tr class="lv2 click" data-sg="${sg}"><td class="l">${esc(clean(SG[sg][1]))} <span class="muted">›</span></td>${line(sx,ss,so)}</tr>`}}
   }
   document.getElementById('tCanais').innerHTML=h+'</tbody>';
+  document.getElementById('gTable').hidden=st.gv!='table';document.getElementById('gCards').hidden=st.gv=='table';
+  document.querySelectorAll('#gvT button').forEach(b=>b.classList.toggle('on',b.dataset.gv==(st.gv||'cards')));
+  if(!MOB.matches&&st.gv!='table'){
+    const tile=(cls,dot,lab,v,sub,big='')=>`<div class="tile ${cls} ${big}"><span>${dot?`<i class="dot" style="background:var(--${dot})"></i>`:''}${lab}</span><b>${R(v)}</b><em>${sub}</em></div>`;
+    const dl3=x=>{const D_=x.delv||1;const r=(lab,c,v)=>`<div><span><i class="dot" style="background:var(--${c})"></i> ${lab}</span><span class="mb"><span style="width:${v/D_*100}%;background:var(--${c})"></span></span><b>${R(v)}</b><span>${pct(x.delv?v/x.delv:0)}</span></div>`;return `<div class="dl3">${r('iFood','ifood',x.iv)}${r('Tel/Whats','outros',x.cv)}${r('D. Direto','ddir',x.dv+x.wv)}</div>`};
+    let g2='';
+    for(const [b,gl,x,s,o] of brs){
+      g2+=`<div class="band"><div class="top"><div><div class="bn">${esc(BRAND[D.B[b]]||D.B[b])}</div><div class="muted small">${Q(x.tq)} itens · ${MES[st.p]}</div></div><div style="text-align:right"><div class="bt">${R(x.tv)}</div>${st.p==1?deltaTag(o.tv,s.tv)+' <span class="small muted">vs setembro</span>':''}</div></div>${barHTML(x)}
+      <div class="tiles">${tile('t-s','salao','Salão*',x.sv,pct(x.tv?x.sv/x.tv:0)+' do total','big')}${tile('t-d','deliv','Delivery',x.delv,pct(x.tv?x.delv/x.tv:0)+' do total','big')}${tile('t-i','ifood','iFood',x.iv,pct(x.delv?x.iv/x.delv:0)+' do delivery')}${tile('t-o','outros','Tel/WhatsApp',x.cv,pct(x.delv?x.cv/x.delv:0)+' do delivery')}${tile('t-dd','ddir','Delivery Direto',x.dv+x.wv,pct(x.delv?(x.dv+x.wv)/x.delv:0)+' do delivery')}</div></div><div class="gcards">`;
+      const gs=gl.map(([g,l])=>[g,l,sumCh(l.map(z=>z[1])),sumCh(l.map(z=>z[2])),sumCh(l.map(z=>z[3]))]).sort((a,b)=>b[2].tv-a[2].tv);
+      for(const [g,l,gx,gsx,gox] of gs){if(gx.tv<=0.005&&gx.tq<=0)continue;const open=st.open.has(g);
+        g2+=`<div class="gc ${open?'open':''}" data-g="${g}"><div class="gh"><div class="gn"><i>${gEmoji(G[g][1])}</i>${esc(clean(G[g][1]))}</div>${st.p==1?deltaTag(gox.tv,gsx.tv):''}</div>
+        <div class="gt">${R(gx.tv)}</div><div class="gq">${Q(gx.tq)} itens · ${pct(x.tv?gx.tv/x.tv:0)} da marca</div>${barHTML(gx)}
+        <div class="two2">${tile('t-s','salao','Salão*',gx.sv,pct(gx.tv?gx.sv/gx.tv:0)+' · '+Q(gx.sq)+' un')}${tile('t-d','deliv','Delivery',gx.delv,pct(gx.tv?gx.delv/gx.tv:0)+' · '+Q(gx.delq)+' un')}</div>${dl3(gx)}`;
+        if(open){g2+=`<div class="subl"><div class="sr h"><span>Subgrupo</span><span>Salão × delivery</span><span class="num">Total</span><span class="num">% delivery</span><span class="num hide2">iFood</span><span class="num hide2">vs set</span></div>`+
+          l.sort((a,b)=>b[1].tv-a[1].tv).filter(z=>z[1].tv>0.005||z[1].tq>0).map(([sg,sx,ss,so])=>`<div class="sr" data-sg="${sg}"><span style="font-weight:600">${esc(clean(SG[sg][1]))} <span class="muted">›</span></span>${barHTML(sx)}<span class="num">${R(sx.tv)}</span><span class="num">${pct(sx.tv?sx.delv/sx.tv:0)}</span><span class="num hide2">${R(sx.iv)}</span><span class="hide2" style="text-align:right">${st.p==1?deltaTag(so.tv,ss.tv):''}</span></div>`).join('')+`</div><div class="more" data-close="${g}">▴ Fechar</div>`}
+        else g2+=`<div class="more">Ver subgrupos ▸</div>`;
+        g2+=`</div>`}
+      g2+=`</div>`}
+    const gc=document.getElementById('gCards');gc.innerHTML=g2;
+    gc.querySelectorAll('.gc').forEach(c=>c.onclick=e=>{const g=+c.dataset.g;const sr=e.target.closest('[data-sg]');if(sr){st.g=grpOfSub[+sr.dataset.sg];st.sg=+sr.dataset.sg;go('produtos');return}
+      if(st.open.has(g)){if(e.target.closest('[data-close]'))st.open.delete(g);else return}else st.open.add(g);renderCanais()});
+  }
   if(MOB.matches){let m='';
     for(const [b,gl,x,s,o] of brs){
       m+=`<div class="mc lvA"><div class="t" style="font-size:17px">${esc(BRAND[D.B[b]]||D.B[b])}</div><div class="row" style="align-items:flex-end"><div class="big" style="font-size:30px">${R(x.tv)}</div><div>${deltaTag(o.tv,s.tv)}</div></div><div class="s">${Q(x.tq)} itens · ${MES[st.p]}</div>${barHTML(x)}${chBoxes(x)}</div>`;
@@ -529,6 +597,7 @@ function renderProdutos(){
 }
 document.getElementById('incAd').onchange=()=>renderDecisao();
 document.getElementById('mSort').onchange=()=>renderProdutos();
+document.querySelectorAll('#gvT button').forEach(b=>b.onclick=()=>{st.gv=b.dataset.gv;renderCanais()});
 document.getElementById('fGrupo').onchange=e=>{st.g=+e.target.value;st.sg=-1;renderProdutos()};
 document.getElementById('fSub').onchange=e=>{st.sg=+e.target.value;renderProdutos()};
 document.getElementById('fBusca').oninput=e=>{st.q=e.target.value.trim().toLowerCase();renderProdutos()};
